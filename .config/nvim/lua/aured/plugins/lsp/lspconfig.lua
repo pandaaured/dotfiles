@@ -8,7 +8,7 @@ return {
 
   config = function()
     -- import lspconfig plugin 
-    local lspconfig = require("lspconfig")
+    local lspconfig = vim.lsp.config
 
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -65,17 +65,17 @@ return {
     -- used to enable autocompletion (assign to every lsp server config)
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
-    lspconfig["html"].setup({
+    lspconfig("html", {
       capabilities = capabilities,
       on_attach = on_attach,
     })
 
-    lspconfig["cssls"].setup({
+    lspconfig("cssls", {
       capabilities = capabilities,
       on_attach = on_attach,
     })
 
-    lspconfig["lua_ls"].setup({
+    lspconfig("lua_ls", {
       capabilities = capabilities,
       on_attach = on_attach,
       settings = {
@@ -95,7 +95,17 @@ return {
       },
     })
 
-    lspconfig["millet"].setup({
+    lspconfig("millet", {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    lspconfig("clangd", {
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    lspconfig("ts_ls", {
       capabilities = capabilities,
       on_attach = on_attach,
     })
