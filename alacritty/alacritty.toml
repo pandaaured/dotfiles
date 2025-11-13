@@ -1,0 +1,43 @@
+[font]
+normal = { family = "BlexMono Nerd Font Mono", style = "SemiBold" }
+size = 14
+
+[window]
+padding = {x = 10, y = 10}
+opacity = 0.9
+blur = true
+startup_mode = "Maximized"
+decorations = "Transparent"
+ 
+[colors.primary]
+background = "#15191e"
+foreground = "#dbdbdb"
+
+[colors.normal]
+black = "#14181d"
+red = "#a64431"
+green = "#57bf37"
+yellow = "#c6c43f"
+blue = "#2d42c0"
+magenta = "#b148b8"
+cyan = "#58c2c5"
+white = "#c7c7c7"
+
+[colors.bright]
+black = "#676767"
+red = "#cf7e77"
+green = "#81e397"
+yellow = "#eae14a"
+blue = "#a7aaec"
+magenta = "#d382db"
+cyan = "#8ef9fd"
+white = "#fefefe"
+
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Alt", chars = "\u001BF" }, # Alt + Right (Move forward one word)
+  { key = "Left", mods = "Alt", chars = "\u001BB" }, # Alt + Left (Move backward one word)
+  { key = "D", mods = "Alt", chars = "\u001BD" }, # Alt + D (Delete word after cursor)
+  { key = "Backspace", mods = "Alt", chars = "\u001B\u007F" }, # Alt + Backspace (Delete word before cursor)
+  { key = "Left", mods = "Control", chars = "\u000B" }, # Control + Left (Move backward to beginning of line)
+]
