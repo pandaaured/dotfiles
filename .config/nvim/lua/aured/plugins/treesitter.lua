@@ -22,16 +22,9 @@ return {
       },
       -- ensure these language parsers are installed
       ensure_installed = {
-        "bash",
         "c",
-        "css",
-        "html",
-        "json",
-        "markdown",
-        "markdown_inline",
         "lua",
         "python",
-        "query",
         "rust",
         "vim",
         "vimdoc",
