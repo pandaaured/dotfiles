@@ -7,6 +7,7 @@ vim.lsp.enable("texlab");
 vim.lsp.enable("pyright");
 vim.lsp.enable("clangd");
 vim.lsp.enable("millet");
+vim.lsp.enable("svelte");
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
