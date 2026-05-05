@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-for f in .gitconfig .gitignore .vimrc .zprofile .zshrc .zshenv; do
+for f in .vimrc .wezterm.lua .zprofile .zshrc .zshenv; do
   ln -sf "$PWD/$f" ~/$f
 done
 

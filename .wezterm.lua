@@ -24,7 +24,10 @@ config.initial_cols = 120
 config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
-config.font_size = 13
+config.font = wezterm.font('Iosevka Nerd Font Propo')
+config.font_size = 16
+
+config.default_cursor_style = 'BlinkingBar'
 
 -- Finally, return the configuration to wezterm:
 return config
