@@ -4,6 +4,24 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+-- Auto-detect system appearance
+local function scheme_for_appearance()
+  if wezterm.gui.get_appearance():find('Dark') then
+    return 'Ayu Dark (Gogh)'
+  else
+    return 'Ayu Light (Gogh)'
+  end
+end
+
+config.color_scheme = scheme_for_appearance()  -- replaces your static line
+
+-- Live-switch when macOS toggles dark/light mode
+wezterm.on('window-config-reloaded', function(window)
+  local overrides = window:get_config_overrides() or {}
+  overrides.color_scheme = scheme_for_appearance()
+  window:set_config_overrides(overrides)
+end)
+
 -- This is where you actually apply your config choices.
 config.keys = {
   -- Move back 1 word 

@@ -1,0 +1,5 @@
+[user]
+	name = pandaaured
+	email = liamwalk@andrew.cmu.edu
+[core]
+	editor = nvim
