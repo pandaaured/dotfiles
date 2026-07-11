@@ -51,3 +51,18 @@ keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>",  { desc = "Open lazygit" })
 -- live server
 keymap.set("n", "<leader>ls", "<cmd>LiveServerStart<CR>", { desc = "Live Server Start" })
 keymap.set("n", "<leader>lr", "<cmd>LiveServerStop<CR>", { desc = "Live Server Stop" })
+
+-- Exit terminal mode.
+keymap.set('t', '<Esc>', '<C-\\><C-n>')
+
+-- Terminal mode.
+keymap.set('t', '<A-h>', '<C-\\><C-n><C-w>h')
+keymap.set('t', '<A-j>', '<C-\\><C-n><C-w>j')
+keymap.set('t', '<A-k>', '<C-\\><C-n><C-w>k')
+keymap.set('t', '<A-l>', '<C-\\><C-n><C-w>l')
+
+-- Normal mode
+keymap.set('n', '<A-h>', '<C-w>h')
+keymap.set('n', '<A-j>', '<C-w>j')
+keymap.set('n', '<A-k>', '<C-w>k')
+keymap.set('n', '<A-l>', '<C-w>l')
