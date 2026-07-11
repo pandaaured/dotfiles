@@ -7,4 +7,5 @@ return {
   dependencies = {
     "windwp/nvim-ts-autotag",
   },
+  ensure_installed = { "typst" },
 }
