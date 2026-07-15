@@ -1,3 +1,6 @@
+vim.opt.exrc = true
+vim.opt.secure = true
+
 vim.lsp.enable("lua_ls");
 vim.lsp.enable("ts_ls");
 vim.lsp.enable("rust_analyzer");
@@ -8,6 +11,7 @@ vim.lsp.enable("pyright");
 vim.lsp.enable("clangd");
 vim.lsp.enable("millet");
 vim.lsp.enable("svelte");
+vim.lsp.enable("tinymist");
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
