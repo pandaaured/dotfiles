@@ -1,0 +1,19 @@
+[font]
+normal = { family = "BlexMono Nerd Font Mono", style = "SemiBold" }
+size = 12
+
+[window]
+padding = {x = 10, y = 10}
+opacity = 0.9
+blur = true
+startup_mode = "Maximized"
+decorations = "Transparent"
+
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Alt", chars = "\u001BF" }, # Alt + Right (Move forward one word)
+  { key = "Left", mods = "Alt", chars = "\u001BB" }, # Alt + Left (Move backward one word)
+  { key = "D", mods = "Alt", chars = "\u001BD" }, # Alt + D (Delete word after cursor)
+  { key = "Backspace", mods = "Alt", chars = "\u001B\u007F" }, # Alt + Backspace (Delete word before cursor)
+  { key = "Left", mods = "Control", chars = "\u000B" }, # Control + Left (Move backward to beginning of line)
+]
