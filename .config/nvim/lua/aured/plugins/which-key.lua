@@ -11,10 +11,12 @@ return {
       { "<leader>d", group = "diagnostics" },
       { "<leader>e", group = "explorer" },
       { "<leader>f", group = "find" },
+      { "<leader>g", group = "git" },
       { "<leader>l", group = "lsp" },
       { "<leader>r", group = "refactor" },
       { "<leader>s", group = "symbols" },
-      { "<leader>t", group = "types" },
+      { "<leader>t", group = "tabs" },
+      { "<leader>w", group = "window" },
     },
   },
 }
