@@ -1,19 +1,23 @@
 return {
   "nvim-tree/nvim-tree.lua",
   dependencies = "nvim-tree/nvim-web-devicons",
-  config = function()
-    local nvimtree = require("nvim-tree")
-
-    -- recommended settings from nvim-tree docs
+  lazy = false,
+  keys = {
+    { "<leader>ee", "<cmd>NvimTreeToggle<CR>", desc = "toggle" },
+    { "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", desc = "reveal current file" },
+    { "<leader>ec", "<cmd>NvimTreeCollapse<CR>", desc = "collapse" },
+    { "<leader>er", "<cmd>NvimTreeRefresh<CR>", desc = "refresh" },
+  },
+  init = function()
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
-
-    nvimtree.setup({
+  end,
+  config = function()
+    require("nvim-tree").setup({
       view = {
         width = 35,
         relativenumber = true,
       },
-      -- disable window_picker for explorer to work well with window splits
       actions = {
         open_file = {
           window_picker = {
@@ -28,5 +32,5 @@ return {
         ignore = false,
       },
     })
-  end
+  end,
 }
