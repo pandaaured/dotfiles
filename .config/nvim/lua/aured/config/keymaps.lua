@@ -15,18 +15,28 @@ local keymap = vim.keymap
     -- these are buffer local on attach.
 
 ---- MISC --------------------------------------------------------------------
-
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode" })
 keymap.set("n", "<leader>nh", "<cmd>nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
 
 ---- [WINDOW] ----------------------------------------------------------------
-
-keymap.set("n", "<leader>wv", "<C-w>v", { desc = "Split vertically" })
+keymap.set("n", "<leader>we", "<C-w>=", { desc = "Equalize splits" })
 keymap.set("n", "<leader>wh", "<C-w>s", { desc = "Split horizontally" })
-keymap.set("n", "<leader>we", "<C-w>=", { desc = "Equalise splits" })
+keymap.set("n", "<leader>wm", "<C-w>_<C-w>|", { desc = "Maximize split" })
+keymap.set("n", "<leader>wn", "<C-w>n", { desc = "New empty split" })
+keymap.set("n", "<leader>wo", "<C-w>o", { desc = "Close all other splits" })
+keymap.set("n", "<leader>wr", "<C-w>r", { desc = "Rotate splits" })
+keymap.set("n", "<leader>ws", "<C-w>s", { desc = "Swap with next split" })
+keymap.set("n", "<leader>wt", "<C-w>t", { desc = "Move split to new tab" })
+keymap.set("n", "<leader>wv", "<C-w>v", { desc = "Split vertically" })
 keymap.set("n", "<leader>wx", "<cmd>close<CR>", { desc = "Close split" })
+keymap.set("n", "<leader>w`", "<cmd>terminal<CR>", { desc = "Open terminal" })
+
+keymap.set("n", "<leader>w+", "<cmd>resize +5<CR>", { desc = "Increase height" })
+keymap.set("n", "<leader>w-", "<cmd>resize -5<CR>", { desc = "Decrease height" })
+keymap.set("n", "<leader>w>", "<cmd>vertical resize +5<CR>", { desc = "Increase width" })
+keymap.set("n", "<leader>w<", "<cmd>vertical resize -5<CR>", { desc = "Decrease width" })
 
 keymap.set("n", "<A-h>", "<C-w>h", { desc = "Window left" })
 keymap.set("n", "<A-j>", "<C-w>j", { desc = "Window down" })
@@ -34,7 +44,6 @@ keymap.set("n", "<A-k>", "<C-w>k", { desc = "Window up" })
 keymap.set("n", "<A-l>", "<C-w>l", { desc = "Window right" })
 
 ---- [TERMINAL] --------------------------------------------------------------
-
 keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 keymap.set("t", "<A-h>", "<C-\\><C-n><C-w>h", { desc = "Window left" })
 keymap.set("t", "<A-j>", "<C-\\><C-n><C-w>j", { desc = "Window down" })
@@ -42,7 +51,6 @@ keymap.set("t", "<A-k>", "<C-\\><C-n><C-w>k", { desc = "Window up" })
 keymap.set("t", "<A-l>", "<C-\\><C-n><C-w>l", { desc = "Window right" })
 
 ---- [TABS] ------------------------------------------------------------------
-
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "New tab" })
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close tab" })
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Next tab" })
