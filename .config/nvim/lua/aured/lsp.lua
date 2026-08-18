@@ -54,19 +54,20 @@ local function lsp_restart()
 end
 
 ---- [LSP] --------------------------------------------------------------------
-
-map("n", "<leader>lr", lsp_restart, "restart clients")
-map("n", "<leader>li", "<cmd>checkhealth vim.lsp<CR>", "client info")
+map("n", "<leader>lc", function()
+  local filter = { bufnr = 0 }
+  vim.lsp.codelens.enable(not vim.lsp.codelens.is_enabled(filter), filter)
+end, "toggle codelens")
 map("n", "<leader>lh", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, "toggle inlay hints")
+map("n", "<leader>li", "<cmd>checkhealth vim.lsp<CR>", "client info")
+map("n", "<leader>lr", lsp_restart, "restart clients")
 
 ---- [DIAGNOSTICS] ------------------------------------------------------------
-
 map("n", "<leader>dd", vim.diagnostic.open_float, "line float")
 
 ---- [BUFFER-LOCAL] ------------------------------------------------------------
-
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
   callback = function(ev)
