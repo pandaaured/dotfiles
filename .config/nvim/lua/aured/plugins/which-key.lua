@@ -4,9 +4,12 @@ return {
   init = function()
     vim.o.timeout = true
     vim.o.timeoutlen = 500
-  end, 
+  end,
   opts = {
-   -- your configuration comes here
-   -- leaving it empty makes default
-  }
+    spec = {
+      { "<leader>c", group = "code" },
+      { "<leader>r", group = "refactor" },
+      { "<leader>d", group = "diagnostics" },
+    },
+  },
 }
