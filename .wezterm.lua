@@ -48,5 +48,17 @@ config.font_size = 16
 config.default_cursor_style = 'BlinkingBar'
 
 config.hide_tab_bar_if_only_one_tab = true
+
+config.colors = {
+  foreground = "#93a4c3",
+  background = "#1a212e",
+  cursor_bg = "#54b0fd",
+  cursor_border = "#54b0fd",
+  cursor_fg = "#1a212e",
+  selection_fg = "#93a4c3",
+  selection_bg = "#283347",
+  ansi =    { "#0c0e15", "#f65866", "#8bcd5b", "#efbd5d", "#41a7fc", "#c75ae8", "#34bfd0", "#93a4c3" },
+  brights = { "#455574", "#ff6b78", "#a0e076", "#ffcf72", "#63bcff", "#dd7bf5", "#4fd8ea", "#b8c6e0" },
+}
 -- Finally, return the configuration to wezterm:
 return config
