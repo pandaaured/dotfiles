@@ -8,8 +8,13 @@ return {
   opts = {
     spec = {
       { "<leader>c", group = "code" },
-      { "<leader>r", group = "refactor" },
       { "<leader>d", group = "diagnostics" },
+      { "<leader>e", group = "explorer" },
+      { "<leader>f", group = "find" },
+      { "<leader>l", group = "lsp" },
+      { "<leader>r", group = "refactor" },
+      { "<leader>s", group = "symbols" },
+      { "<leader>t", group = "types" },
     },
   },
 }
