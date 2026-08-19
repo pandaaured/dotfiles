@@ -14,9 +14,9 @@ return {
       { "<leader>g", group = "git" },
       { "<leader>l", group = "lsp" },
       { "<leader>r", group = "refactor" },
-      { "<leader>s", group = "symbols" },
+      { "<leader>s", group = "split" },
       { "<leader>t", group = "tabs" },
-      { "<leader>w", group = "window" },
+      { "<leader>x", group = "sym/typ" },
     },
   },
 }

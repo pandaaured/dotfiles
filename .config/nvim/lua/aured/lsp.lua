@@ -90,20 +90,20 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("n", "<leader>rn", vim.lsp.buf.rename, "rename", buf)
 
     ---- [SYMBOLS] -------------------------------------------------------------
-    map("n", "<leader>sd",
+    map("n", "<leader>xd",
       "<cmd>Telescope lsp_document_symbols<CR>", "document", buf)
-    map("n", "<leader>sw",
+    map("n", "<leader>xw",
       "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", "workspace", buf)
-    map("n", "<leader>si",
+    map("n", "<leader>xi",
       "<cmd>Telescope lsp_incoming_calls<CR>", "incoming calls", buf)
-    map("n", "<leader>so",
+    map("n", "<leader>xo",
       "<cmd>Telescope lsp_outgoing_calls<CR>", "outgoing calls", buf)
 
     ---- [TYPES] ---------------------------------------------------------------
-    map("n", "<leader>st", function()
+    map("n", "<leader>xt", function()
       vim.lsp.buf.typehierarchy("supertypes")
     end, "supertypes", buf)
-    map("n", "<leader>sb", function()
+    map("n", "<leader>xb", function()
       vim.lsp.buf.typehierarchy("subtypes")
     end, "subtypes", buf)
 
