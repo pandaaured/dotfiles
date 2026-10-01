@@ -6,17 +6,14 @@ local keymap = vim.keymap
 -- Core editor bindings. 
 -- <leader>e* are bindings corresponding to nvim-tree.lua
 -- <leader>d* are bindings corresponding to trouble.lua
--- <leader>ss is a binding corresponding to outline
 -- <leader>f* are bindings corresponding to telescope.lua
 -- <leader>gg are bindings corresponding to lazygit.lua
 -- <leader>g* are bindings corresponding to gitsigns.lua
     -- these are buffer local on attach.
--- <leader>c/l/r/s*, g* are bindings corresponding to lsp.lua.
+-- <leader>c/l/r/x*, g* are bindings corresponding to lsp.lua.
     -- these are buffer local on attach.
 
 ---- MISC --------------------------------------------------------------------
-keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode" })
-keymap.set("n", "<leader>nh", "<cmd>nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
 
