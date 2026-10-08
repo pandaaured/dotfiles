@@ -41,7 +41,6 @@ keymap.set("n", "<A-k>", "<C-w>k", { desc = "Window up" })
 keymap.set("n", "<A-l>", "<C-w>l", { desc = "Window right" })
 
 ---- [TERMINAL] --------------------------------------------------------------
-keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 keymap.set("t", "<A-h>", "<C-\\><C-n><C-w>h", { desc = "Window left" })
 keymap.set("t", "<A-j>", "<C-\\><C-n><C-w>j", { desc = "Window down" })
 keymap.set("t", "<A-k>", "<C-\\><C-n><C-w>k", { desc = "Window up" })
